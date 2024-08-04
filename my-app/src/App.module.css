@@ -1,0 +1,41 @@
+.App {
+	text-align: center;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+	margin: -125px 0 0 -125px;
+}
+.Wrapper {
+	max-width: 300px;
+}
+.Display {
+	font-size: 30px;
+	border: 1px solid black;
+	background: palevioletred;
+}
+.Buttons {
+	display: flex;
+	flex-wrap: wrap;
+}
+.Button {
+	text-align: center;
+	/* border: 1px dotted palevioletred; */
+	width: 60px;
+	height: 60px;
+	font-size: 50px;
+	/* background: rgb(247, 150, 192); */
+	background: radial-gradient(
+		circle,
+		rgba(247, 150, 192, 1) 0%,
+		rgba(118, 174, 241, 1) 100%
+	);
+	line-height: 42px;
+	padding: 0;
+	border: none;
+}
+.Button:hover {
+	box-shadow: palevioletred 0 0px 0px 40px inset;
+}
+.Finish {
+	background-color: rgb(87, 130, 87);
+}
