@@ -17,36 +17,46 @@ export const App = () => {
 			setOperand1(item);
 		} else if (operator) {
 			setOperand2((prevState) => prevState + item);
+			setIsFinish(false);
 		} else {
 			setOperand1((prevState) => prevState + item);
+			setIsFinish(false);
 		}
 	};
 
 	const handleButtonOperand = (op) => {
 		switch (op) {
-			case '+':
+			case '+': {
 				setOperator('+');
+				setIsFinish(false);
 				break;
-			case '-':
+			}
+			case '-': {
 				setOperator('-');
+				setIsFinish(false);
 				break;
+			}
+			default:
 		}
 	};
 
 	const handleSet = () => {
 		switch (operator) {
-			case '+':
+			case '+': {
 				setOperand1(Number(operand1) + Number(operand2));
 				setOperand2('');
 				setOperator('');
 				setIsFinish(true);
 				break;
-			case '-':
+			}
+			case '-': {
 				setOperand1(Number(operand1) - Number(operand2));
 				setOperand2('');
 				setOperator('');
 				setIsFinish(true);
 				break;
+			}
+			default:
 		}
 	};
 
